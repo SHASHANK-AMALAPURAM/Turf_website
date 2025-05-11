@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cricket Turf Booking</title>
+        <link rel="icon" type="image/x-icon" href="./Cricket_Logo_vector_8-01.jpg">
+                <img src="./pngtree-cricket-sport-vector-logo-design-transparent-background-for-free-downloa-png-image_9160057.png" width="100px" style="float: left;">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+        }
+        header {
+            background-color: #007bff;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+        .form-group input, .form-group select, .form-group button {
+            width: 100%;
+            padding: 0.5rem;
+            font-size: 1rem;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .form-group button {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .form-group button:hover {
+            background-color: #218838;
+        }
+        .success-message {
+            color: green;
+            font-weight: bold;
+            margin-top: 1rem;
+        }
+        .home-page {
+            text-align: center;
+            padding: 2rem;
+        }
+        .home-page img {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+        .about {
+            text-align: center;
+            padding: 2rem;
+            border-radius: 5%;
+        }
+        .about a {
+            text-decoration: none;
+            color: #007bff;
+            margin: 0 1rem;
+        }
+        .about a:hover {
+            text-decoration: underline;
+        }
+        table {
+            border-radius: 5%;
+            margin: 0 auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+            padding:10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        .rule{
+            text-align: center;
+
+        }
+        .heading{
+            font-size: 25px;
+            text-align: center;
+        }
+        .listing{
+            display: inline;
+            float:left;
+        }
+    </style>
+</head>
+<body>
+    <header style="border-color: black;">
+        <h1>ONE PLAY ZONE</h1>
+    </header>
+    <div class="home-page">
+        <h2 style="font-size: 40px;">Welcome to Box Cricket</h2>
+        <img src="./Indooor-Nets.jpg" alt="Turf Image">
+        <p>Play, Enjoy, and Experience the Best Turf in Town!</p>
+    </div>
+    <div class="rule">
+        <p class="heading"><b>Basic rules</b></p>
+        <ol class="listing" style="float:initial;">
+            <li>
+                Straight Net Hitting 6runs &4 restaurants
+            </li>
+            <li>
+                Sides 1 or 2 or 3 Runs
+            </li>
+        </ol>
+    </div>
+    <div class="about">
+        <h3 class="heading">About Us</h3>
+        <p><b>Pricing & Timings: </b></p>
+        <table>
+            <tr>
+                <th>Day</th>
+                <th>Time</th>
+                <th>Price</th>
+            </tr>
+            <tr>
+                <td>Monday - Friday</td>
+                <td>
+                    <ul class="listing">
+                        <li>6 AM - 8 AM</li>
+                        <li>8 AM - 10 AM</li>
+                        <li>4 PM - 6 PM </li>
+                        <li>6 PM - 8 PM</li>
+                    </ul>
+                </td>
+                <td>&#8377;500</td>
+            </tr>
+            <tr>
+                <td>Saturday - Sunday</td>
+                <td>
+                    <ul class="listing">
+                        <li>6 AM - 8 AM</li>
+                        <li>8 AM - 10 AM</li>
+                        <li>4 PM - 6 PM </li>
+                        <li>6 PM - 8 PM</li>
+                    </ul>
+                </td>
+                <td>&#8377;800</td>
+            </tr>
+        </table>
+        <p>Follow us on <a href="https://www.instagram.com/i__m_shashank/" >Instagram</a></p>
+        <p>Visit our location on <a href="https://www.google.com/maps/place/B+Zag+Box+Cricket/@17.8794186,83.447215,1916m/data=!3m1!1e3!4m6!3m5!1s0x3a3957d370c69725:0xb4b4b07467ecca72!8m2!3d17.880316!4d83.4458698!16s%2Fg%2F11y5_6lzgz?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D" >Google Maps</a></p>
+    </div>
+    <div class="container">
+        <form id="bookingForm" onsubmit="return conform()">
+            <p class="heading"><b>SLOT BOOKING FORM</b></p>
+            <div class="form-group">
+                <label>Name</label>
+                <input type="text" id="name" placeholder="Enter your name" >
+            </div>
+            <div class="form-group">
+                <label>Email</label>
+                <input type="email" id="email"  placeholder="Enter your email">
+            </div>
+            <div class="form-group">
+                <label>Date</label>
+                <input type="date" id="date"  >
+            </div>
+            <div class="form-group">
+                <label>Time Slot</label>
+                <select id="time" name="time">
+                    <option value="">Select a time slot</option>
+                    <option value="6am-8am">6 AM - 8 AM</option>
+                    <option value="8am-10am">8 AM - 10 AM</option>
+                    <option value="4pm-6pm">4 PM - 6 PM</option>
+                    <option value="6pm-8pm">6 PM - 8 PM</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="payment">Payment Amount</label>
+                <input type="number" id="payment" name="payment" value="500">
+            </div>
+            <div class="form-group">
+                <button type="submit">Book Now</button>
+            </div>
+        </form>
+        <p id="successMessage" class="success-message" style="display:block;">
+            
+        </p> 
+        </form>
+    </div>
+    <script>
+        const bookingForm = document.getElementById('bookingForm');
+        const successMessage = document.getElementById('successMessage');
+
+        bookingForm.addEventListener('submit', function(event) {
+            event.preventDefault()
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const date = document.getElementById('date').value;
+            const time = document.getElementById('time').value;
+
+            if (name && email && date && time) {
+                document.getElementById('successMessage').innerHTML = 'Slot Booked Successfully';
+                bookingForm.reset();
+            }
+            else{
+                document.getElementById('successMessage').innerHTML = 'Enter Valid Details';
+                bookingForm.reset();
+            }
+        });
+    </script>
+
+</body>
+</html>
